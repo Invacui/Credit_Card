@@ -2,7 +2,7 @@ import React from 'react'
 import './card.css'
 import ss from '../../drawables/front-card.svg'
 
-const card = () => {
+const card = ({ inputValue }) => {
   const initialCCN = '0000000000000000';
 
   // Format the credit card number in a single line
@@ -18,7 +18,7 @@ const card = () => {
       <div className='eclipse'>
       <div className='Infouser'>
         
-          <div id='ccn'>{formattedCCN}</div>
+          <div id='ccn'>{inputValue || "0000 0000 0000 0000"}</div>
           <div class="ccn2">
             <div id='cc-name'> james bond</div>
             <div id='expiry'>10/22</div>

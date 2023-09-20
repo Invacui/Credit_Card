@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./hero.css";
 import Card from '../Cards/card';
 import Card2 from '../Cards/card2';
-const Hero = ({onChange}) => {
+const Hero = ({onChangecvc,onChangeccn}) => {
   const [fname, setFname] = useState(""); // Use useState with parentheses, not square brackets
   const [ccnNo, setCcnNo] = useState(""); // Corrected variable names
   const [expMM, setExpMM] = useState(""); // Corrected variable names
@@ -80,7 +80,7 @@ const Hero = ({onChange}) => {
       default_Error_fn_di("hidden_cvc", "--box_cvv");
       setErrormsg("");
     }
-    onChange(newValue);
+    onChangecvc(newValue);
   };
   //YY===============================>>>
 
@@ -136,6 +136,7 @@ const Hero = ({onChange}) => {
     }
     const formattedCcn = formatCreditCardInput(newValue);
     setCcnNo(formattedCcn);
+    onChangeccn(newValue);
   };
   //FNAME===============================>>>
 
@@ -157,10 +158,10 @@ const Hero = ({onChange}) => {
 
   return (
     
-    <div className="body-box">
+    // <div className="body-box">
 
-      <div className="cardman"><Card/></div>
-      <div className="cardman2"><Card2 cvvpass = {cvvNo}/></div>
+    //   <div className="cardman"><Card/></div>
+    //   <div className="cardman2"><Card2 cvvpass = {cvvNo}/></div>
       <div className="form-body">
         <form action="">
           <label htmlFor="fname">CARDHOLDER NAME</label>
@@ -262,7 +263,7 @@ const Hero = ({onChange}) => {
           </label>
         </form>
       </div>
-    </div>
+    // </div>
   );
 };
 

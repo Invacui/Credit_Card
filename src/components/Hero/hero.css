@@ -12,7 +12,7 @@
   align-items: center;
   border: 3px solid rgba(37, 99, 255, 0.573);
   height: 100vh;
-  background-image: url("../../drawables/bg-image.svg");
+  /* background-image: url("../../drawables/bg-image.svg"); */
   background-repeat: no-repeat;
   background-size: 30% auto;
   position: relative;
