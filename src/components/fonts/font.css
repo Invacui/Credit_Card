@@ -1,0 +1,62 @@
+/* fonts.css - Include Inter and Roboto fonts */
+
+/* Inter Font */
+@font-face {
+    font-family: 'Inter';
+    font-weight: 300; /* Light */
+    font-style: normal;
+    src: url('https://fonts.gstatic.com/s/inter/v4/UcCj3F9etCOi6sTcnR6HxAM.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Inter';
+    font-weight: 400; /* Regular */
+    font-style: normal;
+    src: url('https://fonts.gstatic.com/s/inter/v4/UcCj3F9etCOi6sTcnR6HxAM.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Inter';
+    font-weight: 600; /* Semi-Bold */
+    font-style: normal;
+    src: url('https://fonts.gstatic.com/s/inter/v4/UcCj3F9etCOi6sTcnR6HxAM.ttf') format('truetype');
+  }
+  
+  /* Roboto Font */
+  @font-face {
+    font-family: 'Roboto';
+    font-weight: 300; /* Light */
+    font-style: normal;
+    src: url('https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmSU5fBBc9.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    font-weight: 400; /* Regular */
+    font-style: normal;
+    src: url('https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxK.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    font-weight: 700; /* Bold */
+    font-style: normal;
+    src: url('https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmEU9fBBc9.ttf') format('truetype');
+  }
+  /* fonts.css - Include Space Grotesk font */
+
+/* Space Grotesk Font - Regular */
+@font-face {
+  font-family: 'Space-Grotesk';
+  src: url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400&display=swap');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Space Grotesk Font - Bold */
+@font-face {
+  font-family: 'Space-Grotesk';
+  src: url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+  font-weight: 700;
+  font-style: normal;
+}

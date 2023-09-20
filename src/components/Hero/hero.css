@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap");
+:root {
+  --box_cvv: #298aeb;
+  --box_ccv: #298aeb;
+  --box_mm: #298aeb;
+  --box_yy: #298aeb;
+  --box_fname: #298aeb;
+}
+.body-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: 3px solid rgba(37, 99, 255, 0.573);
+  height: 100vh;
+  background-image: url("../../drawables/bg-image.svg");
+  background-repeat: no-repeat;
+  background-size: 30% auto;
+  position: relative;
+}
+.cardman{
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+.cardman2{
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+.form-body {
+  margin-right: 20vw;
+  padding: 60px;
+  width: 382px;
+  border: 4px solid pink;
+  height: fit-content;
+  position: relative;
+}
+/*color coding of the errors input box*/
+#cvv_no:focus {
+  color: var(--box_cvv);
+  border: 1px solid var(--box_cvv);
+  outline: 1px;
+}
+#expmm:focus {
+  color: var(--box_mm);
+  border: 1px solid var(--box_mm);
+  outline: 1px;
+}
+#expyy:focus {
+  color: var(--box_yy);
+  border: 1px solid var(--box_yy);
+  outline: 1px;
+}
+#ccn_no:focus {
+  color: var(--box_ccn);
+  border: 1px solid var(--box_ccn);
+  outline: 1px;
+}
+#fname:focus {
+  color: var(--box_fname);
+  border: 1px solid var(--box_fname);
+  outline: 1px;
+}
+
+/*color coding of the errors */
+.Errormsg {
+  display: block;
+  color: red;
+  width: inherit;
+  margin-top: 4px;
+}
+.Errormsg.hidden {
+  display: none;
+}
+
+label {
+  padding-left: 5px;
+  text-align: start;
+  float: left;
+  width: 144px;
+  height: 9px;
+  color: #404040;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.86px;
+}
+input {
+  padding-left: 10px;
+  position: relative;
+  overflow: hidden;
+  width: 382px;
+  height: 44px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.875px;
+}
+input::placeholder {
+  color: #bbb9bc;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.875px;
+}
+.sub-input-box {
+  display: flex;
+  justify-content: space-between;
+  width: 103%;
+  border: 4px solid green;
+}
+#expmm {
+  width: min-content;
+}
+#expyy {
+  width: min-content;
+  margin-left: 20px;
+}
+#cvv_no {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+#sub_button{
+cursor: pointer;
+margin-top: 20px;
+color: #fff;
+font-family: "Space Grotesk", sans-serif;
+width: 401px;
+height: 53px;
+flex-shrink: 0;
+border-radius: 6px;
+border: 1px solid #000;
+background: #220930;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+#sub_button:hover {background-color: #080341}
+
+#sub_button:active {
+  background-color: #080341;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

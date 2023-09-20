@@ -1,0 +1,38 @@
+@import '../fonts/font.css';
+
+.ecard {
+    display: flex;
+    flex-direction: column;
+    height: 245px;
+    width: 446px;
+    margin-top: 100px;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+}
+.box{
+    margin-top: 25px;
+    width: auto;
+}
+#black_strip{
+    height: 50px;
+    background-color: black;
+}
+#cvv_box{
+    display: flex;
+    padding-right: 25px;
+    justify-content: end;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #ADB6BF;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 35px;
+
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 3.29px;
+}

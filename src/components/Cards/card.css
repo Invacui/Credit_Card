@@ -1,0 +1,163 @@
+@import '../fonts/font.css';
+.fcard {
+    height: 245px;
+    width: 446px;    
+    border-radius: 15px;
+}
+
+/*top right design*/
+.tr-eclipse {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100px;
+    height: auto;
+    background-color: transparent;
+    margin: 30px;
+    z-index: 1;
+    position: absolute;
+}
+
+/*First box eps*/
+#first_eps {
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/*Second box eps*/
+#second_eps {
+    width: 19px;
+    height: 19px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+/* card background */
+.eclipse {
+    overflow: hidden;
+    background-color: #6244fa;
+    width: auto;
+    height: inherit;
+    border: 2px soild red;
+    border-radius: inherit;
+    position: relative;
+
+}
+
+.eps {
+    filter: blur(47.5px);
+}
+
+#one {
+
+    position: absolute;
+    bottom: 0%;
+    left: -10%;
+    width: 250px;
+    height: 118px;
+    transform: rotate(-34.616deg);
+    background-color: #6328c0;
+    border-radius: 50%;
+}
+
+#two {
+
+    position: absolute;
+    bottom: -15%;
+    left: 4%;
+    width: 380.921px;
+    height: 142.731px;
+    transform: rotate(-41.78deg);
+    background-color: #00b7fac0;
+    border-radius: 50%;
+    margin: auto 10px;
+}
+
+#three {
+
+    position: absolute;
+    right: -23%;
+    top: -20%;
+    width: 300.363px;
+    height: 184.802px;
+    transform: rotate(-34.616deg);
+    background-color: #ea7167;
+    border-radius: 50%;
+    margin: auto 10px;
+}
+
+#four {
+
+    position: absolute;
+    bottom: -30%;
+    right: -13%;
+    width: 380.921px;
+    height: 142.731px;
+    transform: rotate(-41.78deg);
+    background-color: rgb(254, 1, 165);
+    border-radius: 50%;
+    margin: auto 10px;
+}
+
+#five {
+
+    position: absolute;
+    bottom: -15%;
+    right: -40%;
+    width: 380.921px;
+    height: 142.731px;
+    transform: rotate(-41.78deg);
+    background-color:rgba(181, 64, 228, 0.709);
+    border-radius: 50%;
+    margin: auto 10px;
+}
+/*Infouser*/
+.Infouser{
+display: flex;
+flex-direction: column;
+height: fit-content;
+left: 7%;
+right: 7%;
+bottom  : 15%;
+z-index: 1;
+position: absolute;
+border: 2px solid white;
+}
+#ccn{
+color: #FFF;
+font-family: Inter;
+font-size: 26px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 4.68px;
+}
+.ccn2{
+    margin-top: 15px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+}
+#cc-name{
+color: #FFF;
+font-family: Inter;
+text-transform: uppercase;
+font-size: 13px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 2.47px;
+}
+#expiry{
+color: #FFF;
+font-family: Inter;
+text-transform: uppercase;
+font-size: 13px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 2.47px;
+}
