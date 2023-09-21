@@ -161,7 +161,8 @@ const Hero = ({onChangecvc,onChangeccn,onChangefname,onChangemm,onChangeyy}) => 
     if (newValue.trim() === "") {
       default_Error_fn_en("hidden_fname", "--box_fname");
       setErrormsg3("The field shouldn't be empty");
-    } else if (!/^[a-zA-Z]+$/.test(newValue)) {
+    } else if (!/^[a-zA-Z]+$/.test(newValue.replace(/\s/g, ""))) {
+      
       default_Error_fn_en("hidden_fname", "--box_fname");
       setErrormsg3("Only alphabets are allowed");
     } else {
@@ -188,6 +189,7 @@ const Hero = ({onChangecvc,onChangeccn,onChangefname,onChangemm,onChangeyy}) => 
             id="fname"
             placeholder="e.g. Jane Appleseed"
             value={fname}
+            maxLength = "20"
             onChange={(e) => {
               setFname(e.target.value);
               handlefnameChange(e.target.value);
