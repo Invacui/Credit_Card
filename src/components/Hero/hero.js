@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./hero.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Hero = ({onChangecvc,onChangeccn,onChangefname,onChangemm,onChangeyy}) => {
   const [fname, setFname] = useState(""); // Use useState with parentheses, not square brackets
@@ -11,8 +13,22 @@ const Hero = ({onChangecvc,onChangeccn,onChangefname,onChangemm,onChangeyy}) => 
   const [errormsg2, setErrormsg2] = useState("");
   const [errormsg3, setErrormsg3] = useState("");
   let [final, setFinal] = useState(0);
-  //const Errormsglable = document.querySelector('.Errormsg.hidden');
-  //Input space ======================>>>
+  const [errorState, setErrorState] = useState("NE");
+  //Toast Creator Function ======================>>>
+  const showToast = (message, type) => {
+    toast(message, {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      className: `toast ${type}`, // Apply the appropriate class based on the type
+      theme: "light",
+    });
+  };
+  //=============================================>>>
   // Format the credit card input
   const formatCreditCardInput = (newValue) => {
     let inputValue = newValue.replace(/\D/g, ""); // Remove non-digit characters
@@ -37,19 +53,16 @@ const Hero = ({onChangecvc,onChangeccn,onChangefname,onChangemm,onChangeyy}) => 
       expYY.trim() === "" ||
       cvvNo.trim() === "";
 
-    // Determine the final result based on conditions
-    let finalResult = "";
 
-    if (isAnyFieldEmpty) {
-      finalResult = "Error: Some fields are empty.";
-      document.getElementById("sub_lab").classList.remove("hidden");
-    } else {
-      finalResult = "No-Error";
-      document.getElementById("sub_lab").classList.add("hidden");
+    // Update the error state based on the visibility of the labels
+    const labels = document.querySelectorAll('.Errormsg');
+    const anyLabelVisible = [...labels].some(label => !label.classList.contains('hidden'));
+    
+    //Set toast==>
+    console.log(`IsAnyFieldEmpty==>${isAnyFieldEmpty} ,LableVisible=>${anyLabelVisible}`)
+    setErrorState((isAnyFieldEmpty || anyLabelVisible) ? showToast("Check the form for Errors!", "toast-error") : showToast("Info collected thanks!", "toast-success"));
+    setFinal(isAnyFieldEmpty && anyLabelVisible);
 
-    }
-
-    setFinal(finalResult);
   };
   //====================================>>
   //Default_Err_function==============>>>
@@ -142,7 +155,7 @@ const Hero = ({onChangecvc,onChangeccn,onChangefname,onChangemm,onChangeyy}) => 
   //FNAME===============================>>>
 
   const handlefnameChange = (newValue) => {
-    setCvvNo(newValue);
+    setFname(newValue);
     
     if (newValue.trim() === "") {
       default_Error_fn_en("hidden_fname", "--box_fname");
@@ -206,7 +219,7 @@ const Hero = ({onChangecvc,onChangeccn,onChangefname,onChangemm,onChangeyy}) => 
             <div className="sub--input-lable">
               <label htmlFor="exp">EXP.DATE (MM/YY)</label>
               <label htmlFor="cvv_no">
-                &emsp;&emsp;&emsp;&emsp;&emsp;CVV
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;CVV
               </label>
             </div>
             <br />
@@ -261,9 +274,18 @@ const Hero = ({onChangecvc,onChangeccn,onChangefname,onChangemm,onChangeyy}) => 
           >
             Submit
           </button>
-          <label id="sub_lab" class="Errormsg hidden">
-            Error : {final}
-          </label>
+          <ToastContainer 
+          position="bottom-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          />
         </form>
       </div>
     // </div>

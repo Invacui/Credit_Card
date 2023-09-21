@@ -11,7 +11,7 @@ body{
 .body_main{
 
     display: flex;
-    overflow: hidden;
+    flex-wrap: wrap;
     /* flex-wrap: wrap; */
     justify-content: space-around;
     background-color: transparent;
