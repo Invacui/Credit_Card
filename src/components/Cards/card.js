@@ -2,7 +2,7 @@ import React from 'react'
 import './card.css'
 import ss from '../../drawables/front-card.svg'
 
-const card = ({ inputValue }) => {
+const card = ({ ccn,fname,mm,yy }) => {
   const initialCCN = '0000000000000000';
 
   // Format the credit card number in a single line
@@ -18,10 +18,10 @@ const card = ({ inputValue }) => {
       <div className='eclipse'>
       <div className='Infouser'>
         
-          <div id='ccn'>{inputValue || "0000 0000 0000 0000"}</div>
+          <div id='ccn'>{ccn || "0000 0000 0000 0000"}</div>
           <div class="ccn2">
-            <div id='cc-name'> james bond</div>
-            <div id='expiry'>10/22</div>
+            <div id='cc-name'> {fname || "james bond"}</div>
+            <div id='expiry'>{`${mm || '00'}/${yy || '00'}`}</div>
         </div>
       </div>
         <span class="eps" id="three">3</span >

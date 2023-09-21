@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import "./hero.css";
-import Card from '../Cards/card';
-import Card2 from '../Cards/card2';
-const Hero = ({onChangecvc,onChangeccn}) => {
+
+const Hero = ({onChangecvc,onChangeccn,onChangefname,onChangemm,onChangeyy}) => {
   const [fname, setFname] = useState(""); // Use useState with parentheses, not square brackets
   const [ccnNo, setCcnNo] = useState(""); // Corrected variable names
   const [expMM, setExpMM] = useState(""); // Corrected variable names
   const [expYY, setExpYY] = useState(""); // Corrected variable names
   const [cvvNo, setCvvNo] = useState(""); // Corrected variable names
-  const [cvvLabel, setCvvLabel] = useState("CVC"); // Initial label
   const [errormsg, setErrormsg] = useState("");
   const [errormsg2, setErrormsg2] = useState("");
   const [errormsg3, setErrormsg3] = useState("");
@@ -97,6 +95,8 @@ const Hero = ({onChangecvc,onChangeccn}) => {
       default_Error_fn_di("hidden_cvc", "--box_yy");
       setErrormsg("");
     }
+    onChangeyy(newValue);  //pass the state...
+
   };
   //MM===============================>>>
 
@@ -116,6 +116,7 @@ const Hero = ({onChangecvc,onChangeccn}) => {
       default_Error_fn_di("hidden_cvc", "--box_mm");
       setErrormsg("");
     }
+    onChangemm(newValue);  //pass the state...
   };
   //Ccn===============================>>>
 
@@ -136,7 +137,7 @@ const Hero = ({onChangecvc,onChangeccn}) => {
     }
     const formattedCcn = formatCreditCardInput(newValue);
     setCcnNo(formattedCcn);
-    onChangeccn(newValue);
+    onChangeccn(newValue);  //pass the state...
   };
   //FNAME===============================>>>
 
@@ -153,6 +154,8 @@ const Hero = ({onChangecvc,onChangeccn}) => {
       default_Error_fn_di("hidden_fname", "--box_fname");
       setErrormsg3("");
     }
+    onChangefname(newValue);  //pass the state...
+
   };
   //***************************************
 
@@ -203,7 +206,7 @@ const Hero = ({onChangecvc,onChangeccn}) => {
             <div className="sub--input-lable">
               <label htmlFor="exp">EXP.DATE (MM/YY)</label>
               <label htmlFor="cvv_no">
-                &emsp;&emsp;&emsp;&emsp;&emsp;{cvvLabel}
+                &emsp;&emsp;&emsp;&emsp;&emsp;CVV
               </label>
             </div>
             <br />

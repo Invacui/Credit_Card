@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid white;
+    height: 100vh;
+    background-image: url(../../drawables/bg-image.svg);
+    background-repeat: repeat-y;
+    background-size: 35% auto ;
+}
+.body_main{
+
+    display: flex;
+    overflow: hidden;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    background-color: transparent;
+    border: 4px solid yellow;
+    height: auto;
+    width: 80vw;
+}
+.insidebox{
+    display: flex;
+    flex-direction: column;
+    border: 4px solid green;
+}
+#cards{
+    justify-content: space-between;
+}
+#form_box{
+justify-content: center;
+}
