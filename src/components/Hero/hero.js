@@ -3,6 +3,7 @@ import "./hero.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const Hero = ({onChangecvc,onChangeccn,onChangefname,onChangemm,onChangeyy}) => {
   const [fname, setFname] = useState(""); // Use useState with parentheses, not square brackets
   const [ccnNo, setCcnNo] = useState(""); // Corrected variable names
@@ -25,7 +26,7 @@ const Hero = ({onChangecvc,onChangeccn,onChangefname,onChangemm,onChangeyy}) => 
       draggable: true,
       progress: undefined,
       className: `toast ${type}`, // Apply the appropriate class based on the type
-      theme: "light",
+      theme: "color",
     });
   };
   //=============================================>>>
@@ -60,7 +61,7 @@ const Hero = ({onChangecvc,onChangeccn,onChangefname,onChangemm,onChangeyy}) => 
     
     //Set toast==>
     console.log(`IsAnyFieldEmpty==>${isAnyFieldEmpty} ,LableVisible=>${anyLabelVisible}`)
-    setErrorState((isAnyFieldEmpty || anyLabelVisible) ? showToast("Check the form for Errors!", "toast-error") : showToast("Info collected thanks!", "toast-success"));
+    setErrorState((isAnyFieldEmpty || anyLabelVisible) ? showToast("⚠️ Check the form for Errors!", "toast-error") : showToast("✔️ Info collected thanks!", "toast-success"));
     setFinal(isAnyFieldEmpty && anyLabelVisible);
 
   };

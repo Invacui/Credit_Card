@@ -2,7 +2,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 4px solid white;
+    /* border: 4px solid white; */
     height: 100vh;
     background-image: url(../../drawables/bg-image.svg);
     background-repeat: repeat-y;
@@ -15,14 +15,14 @@ body{
     /* flex-wrap: wrap; */
     justify-content: space-around;
     background-color: transparent;
-    border: 4px solid yellow;
+    /* border: 4px solid yellow; */
     height: auto;
     width: 80vw;
 }
 .insidebox{
     display: flex;
     flex-direction: column;
-    border: 4px solid green;
+    /* border: 4px solid green; */
 }
 #cards{
     justify-content: space-between;

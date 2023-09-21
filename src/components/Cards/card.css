@@ -124,7 +124,7 @@ right: 7%;
 bottom  : 15%;
 z-index: 1;
 position: absolute;
-border: 2px solid white;
+/* border: 2px solid white; */
 }
 #ccn{
 color: #FFF;
@@ -137,7 +137,7 @@ letter-spacing: 4.68px;
 }
 .ccn2{
     margin-top: 15px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display: flex;
     justify-content: space-between;
 }
